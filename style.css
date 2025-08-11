@@ -1,0 +1,212 @@
+:root {
+    --color-primary: #1e1e2f;
+    --color-secondary: #2a2a3c;
+    --color-tertiary: #555555;
+    --color-button: #ff9800;
+    --color-button-hover: #e68900;
+    --color-text: #e0e0e0;
+    --color-white: #f5f5f5;
+}
+
+/* Generales */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Sección entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 40px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0;
+    text-align: center;
+}
+
+/* Contenedor título + botón reset */
+.title-with-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+/* Botón diamante rojo */
+.reset-button {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(180deg, #ff5757 0%, #d93636 100%);
+    border: none;
+    transform: rotate(45deg) translateX(5px);
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.45), inset 0 -2px 4px rgba(255,255,255,0.05);
+    transition: transform 120ms ease, background 120ms ease;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset-button::before {
+    content: "↻";
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    transition: color 120ms ease;
+}
+
+.reset-button:hover {
+    background: linear-gradient(180deg, #00ff41 0%, #008f11 100%);
+    transform: rotate(45deg) scale(1.05) translateX(10px);
+}
+
+.reset-button:hover::before {
+    color: #000000;
+}
+
+/* Entrada y botones */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--color-tertiary);
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    background-color: #3b3b4f;
+    color: var(--color-white);
+}
+
+.input-name::placeholder { 
+    color: #bfbfbf; 
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-white);
+    border: 2px solid var(--color-tertiary);
+    border-radius: 0 25px 25px 0;
+    border-left: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 80px;
+    transition: background-color 0.2s ease;
+}
+
+.button-add:hover { 
+    background-color: #6d6d6d; 
+    border-color: #6d6d6d;
+}
+
+/* Botón sortear */
+.button-container { 
+    margin-top: 10px; 
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    padding: 10px 22px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+}
+
+.button-draw img { 
+    margin-right: 12px; 
+}
+
+.button-draw:hover { 
+    background-color: var(--color-button-hover); 
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 18px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+.result-list {
+    margin-top: 6px;
+    color: #05DF05;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.name-list li {
+    padding: 8px 12px;
+    margin: 4px 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
